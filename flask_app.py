@@ -41,8 +41,6 @@ times=[]
 currentFilename=""
 
 
-
-
 SQLALCHEMY_DATABASE_URI = "mysql+mysqlconnector://{username}:{password}@{hostname}/{databasename}".format(
     username="",
     password="",
@@ -58,22 +56,16 @@ db.metadata.clear()
 
 engine = create_engine('sqlite:///:memory:')
 
-
 Base = declarative_base()
 meta = MetaData()
 
 
 
 class users(db.Model):
-
     __tablename__ = "users"
-
-
     id = db.Column(db.INTEGER, primary_key=True)
     name= db.Column(db.TEXT)
     code = db.Column(db.String(4096))
-
-
 
 class results(db.Model):
 
@@ -93,7 +85,6 @@ class results(db.Model):
     q3 = db.Column(db.TEXT)
     q4 = db.Column(db.TEXT)
     q5 = db.Column(db.TEXT)
-
 
 
 def TableCreator(tablename):
@@ -118,11 +109,6 @@ for i in images:
 for i in tables.values():
     i.__table__.create(engine)
 
-
-
-
-
-
 def get_images():
     res = random.sample(imagesList1, len(imagesList1))
     return res
@@ -130,17 +116,12 @@ def get_images():
 def get_resultimage(imgcurr):
     return os.path.join(app.config['images'],imgcurr)
 
-
-
 @app.route("/")
 def index():
     global ImageNumber,imagesList, sortedImages
     session['imagesList']=get_images()
     session['ImageNumber']=0
     return render_template('index.html')
-
-
-
 
 def returnImage(imagenumber):
 	global currentFilename, imagesList
@@ -304,10 +285,7 @@ def getids():
         timeq=db.session.query(tables[os.path.splitext(i)[0]].timetaken).filter(tables[os.path.splitext(i)[0]].user_id == currentID).all()
         for row in timeq:
             list1.append(float(0 if row[0] is None else row[0]))
-        #result = [r for r, in timeq]
-        #timeq2=db.session.query(timeq.timetaken).all
-        #list1.append(timeq)
-    #result = [r for r, in timeq]
+
     return (str(list1)+"|"+str(currentID))
 
 
