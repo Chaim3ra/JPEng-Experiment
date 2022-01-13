@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+	<title>
+		Effect of age on the likelihood of sharing environmental messages on social media
+	</title>
+</head>
+
+
+
+<body style="background-color:#bdbdbd">
+	<center>
+
+	<div class="card bg-light mb-3" style="min-width: 20rem;max-width: 45rem;max-height: 50rem;top: 4rem;">
+  		<div class="card-header" style="font-size: 1.3rem">Hello, {{ name }}</div>
+  			<div class="card-body">
+  				<div class="text-center">
+ 				 <img src="{{ quiz_image }}" class="img-fluid" style="max-height: 30rem;min-width: 15rem;" alt=" ">
+				</div>
+				<br>
+
+				<div class="btn-group" role="group" aria-label="Basic example">
+  					<form action="/dont_share">
+						<button type="submit" class="btn btn-outline-primary" style="min-width: 8rem;min-height: 3rem;">Dont share</button>
+					</form>
+  					<form action="/share">
+				<button type="submit" class="btn btn-outline-primary" style="min-width: 8rem; min-height: 3rem;">Share</button>
+			</form>
+				</div>
+
+
+
+
+
+  		</div>
+  	</div>
+
+  	</center>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+	<title>
+		Users | Experiment
+	</title>
+</head>
+
+  <body style="background-color:#bdbdbd">
+<center>
+    <div class="card bg-light mb-3" style="max-width: 45rem;max-height: 50rem;top: 4rem;min-width: 20rem;">
+      <div class="card-header" style="font-size: 1.4rem">Users</div>
+        <div class="card-body">
+          <div class="text-center">
+        </div>
+        <br>
+
+        <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Total Time(secs)</th>
+        <th>Mean Time(secs)</th>
+        <th>Buffer Mean Time(secs)</th>
+        <th>Fearful Mean Time(secs)</th>
+        <th>Hopeful Mean Time(secs)</th>
+        <th>How do you feel about participating</th>
+        <th>Which image was the most striking?</th>
+        <th>Why did you share images?</th>
+        <th>Why didnt you share images?</th>
+        <th>Did you experience any discomfort?</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for users in userinfo %}
+      <tr>
+        <td>{{users.id}}</td>
+        <td>{{users.name}}</td>
+        <td>{{users.code}}</td>
+        <td>{{users.total}}</td>
+        <td>{{users.mean}}</td>
+        <td>{{users.buffert}}</td>
+        <td>{{users.fearful}}</td>
+        <td>{{users.hopefuk}}</td>
+        <td>{{users.q1}}</td>
+        <td>{{users.q2}}</td>
+        <td>{{users.q3}}</td>
+        <td>{{users.q4}}</td>
+        <td>{{users.q5}}</td>
+        {% endfor %}
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+
+
+
+
+      </div>
+    </div>
+</center>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+<script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+  </body>
+</html>
